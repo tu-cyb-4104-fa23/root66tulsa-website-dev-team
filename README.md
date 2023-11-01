@@ -1,7 +1,10 @@
 # root66tulsa-website-dev-team
 root66tulsa-website-dev-team created by GitHub Classroom
 
-## Description
+#### Table of Contents
+1. [Description](#Roles)
+
+## Description <a name="Roles"></a>
 
 ## Getting Started
 
@@ -34,3 +37,9 @@ root66tulsa-website-dev-team created by GitHub Classroom
 * Sean
 * Eli
 * Ryan
+
+##### Setup Process
+1. Clone the Repository
+```
+git clone https://github.com/tu-cyb-4104-fa23/root66tulsa-website-dev-team.git
+```
