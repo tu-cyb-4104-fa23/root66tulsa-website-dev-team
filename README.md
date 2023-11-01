@@ -1,44 +1,42 @@
-# root66tulsa-website-dev-team
-root66tulsa-website-dev-team created by GitHub Classroom
-
+# Root66Tulsa-Website-Dev-Team
+***
 #### Table of Contents
-1. [Description](#Roles)
+1. [Dependencies](#dependencies)
+2. [Roles](#Roles)
 
-## Description <a name="Roles"></a>
-
-## Getting Started
-
-### Dependencies
+##### Dependencies <a name="dependencies"></a>
+***
 * Django
 * Python
 * Docker
 
-## Authors
-
-### Deployment (Docker)
+##### Authors: Description <a name="Roles"></a>
+***
+__Deployment (Docker)__
 * Julian
 * Sean
 * Alec
-### Styling
+__Styling__
 * Rhea
 * Ben
 * Eli
 * Nhon
-### Page Content
+__Page Content__
 * Marina
 * Rhea
 * Eli
 * Devan
-### Django
+__Django__
 * Areeb
 * Marina
 * Ben
-### Team Info / Alumni
+__Team Info / Alumni__
 * Sean
 * Eli
 * Ryan
 
 ##### Setup Process
+***
 1. Clone the Repository
 ```
 git clone https://github.com/tu-cyb-4104-fa23/root66tulsa-website-dev-team.git
