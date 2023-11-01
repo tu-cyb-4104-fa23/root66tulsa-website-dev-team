@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # My apps.
+    'front_end',
+    # Default Django Apps.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
