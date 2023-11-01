@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Root66WebsiteConfig(AppConfig):
+class PagesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'root66_website'
+    name = 'front_end'
