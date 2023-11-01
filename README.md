@@ -6,34 +6,38 @@
 
 ##### Dependencies <a name="dependencies"></a>
 ***
-* Django
-* Python
-* Docker
+- Django
+- Python
+- Docker
 
 ##### Authors: Description <a name="Roles"></a>
 ***
 __Deployment (Docker)__
-* Julian
-* Sean
-* Alec
+- Julian
+- Sean
+- Alec
+  
 __Styling__
-* Rhea
-* Ben
-* Eli
-* Nhon
+- Rhea
+- Ben
+- Eli
+- Nhon
+
 __Page Content__
-* Marina
-* Rhea
-* Eli
-* Devan
+- Marina
+- Rhea
+- Eli
+- Devan
+
 __Django__
-* Areeb
-* Marina
-* Ben
+- Areeb
+- Marina
+- Ben
+
 __Team Info / Alumni__
-* Sean
-* Eli
-* Ryan
+- Sean
+- Eli
+- Ryan
 
 ##### Setup Process
 ***
