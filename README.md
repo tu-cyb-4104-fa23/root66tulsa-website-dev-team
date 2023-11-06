@@ -62,3 +62,16 @@ python -m venv [ENVIRONMENT_NAME]
 ```
 ./[ENVIRONMENT_NAME]/Scripts/activate
 ```
+- Activate a Virtual Environment (On macOS or Linux)
+```
+source venv/bin/activate
+```
+- Migrate the Database:
+```
+python manage.py migrate
+```
+- Run the Development Server:
+```
+python manage.py runserver
+```
+- Website can based accessed on http://127.0.0.1:8000/
