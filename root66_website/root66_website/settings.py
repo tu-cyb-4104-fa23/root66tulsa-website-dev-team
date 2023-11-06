@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps.
     'front_end',
+    # Third-party apps.
+    'django_bootstrap5',
     # Default Django Apps.
     'django.contrib.admin',
     'django.contrib.auth',
