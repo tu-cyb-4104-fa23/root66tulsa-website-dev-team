@@ -1,3 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: root66website
+    ports:
+      - "8000:8000"
+    restart: always
+
 # services:
 #   db:
 #     image: postgres
