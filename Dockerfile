@@ -20,5 +20,8 @@ RUN pip install -r requirements.txt
 # Copy whole project to your docker home directory.
 COPY ./root66_website $AppDir
 
+# Copy entrypoint.sh
+COPY ./entrypoint.sh $AppDir
+
 # Port where the Django app runs
 EXPOSE 8000
