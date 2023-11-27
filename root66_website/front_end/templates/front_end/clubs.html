@@ -1,7 +1,35 @@
 {% extends "front_end/base.html" %}
 
 {% block content %}
+{% load static %}
 
+<div class="button">
 
+    <div id="button" style="text-align: center;">
+        <button onclick="show()">
+        <img width="200" height="200" src="{% static 'img/red_button.jpg' %}">
+        </button>
+    </div>
+
+    <div id="clubs" class="hidden" style="display: none; text-align: center;">
+        <a href="{% url 'front_end:wicys' %}">
+            <p>WICYS</p>
+        </a>
+
+        <a href="{% url 'front_end:ctf' %}">
+            <p>CTF</p>
+        </a>
+    </div>
+
+    <script>
+        function show(){
+            var clubsDiv = document.getElementById('clubs');
+            var buttonDiv = document.getElementById('button')
+            clubsDiv.style.display = 'block';
+            buttonDiv.setAttribute("hidden", "hidden")
+        }
+    </script>
+
+</div>
 
 {% endblock content %}
