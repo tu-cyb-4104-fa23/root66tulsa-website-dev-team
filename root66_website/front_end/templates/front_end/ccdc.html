@@ -1,7 +1,51 @@
 {% extends "front_end/base.html" %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/ccdc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
 
+<h1><center>Collegiate Cyber Defense Competition Team</center></h1>
+
+<center><img src="../../static/img/ccdclogo.png" width="450" height="450" alt="CCDC Logo"></center>
+
+<p>
+
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            
+          <li class="nav-item-a">
+            <a class="nav-link active" data-toggle="tab" href="#home">About The Competition</a>
+          </li>
+          <li class="nav-item-b">
+            <a class="nav-link" data-toggle="tab" href="#menu1">How to Join</a>
+          </li>
+          <li class="nav-item-c">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Photo Gallery</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane container active" id="home">The TU Collegiate Cyber Defense Team (TUCCDC) is one of the university’s two primary competitive cyber teams. The event is a blue team style competition where students must defend a “corporate” network from an active red team engagement. Each spring, a team of TU students competes in the southwest regional circuit (hosted at the University of Tulsa) with hopes of advancing to the national event at the University of Texas at San Antonio. The TU team makes routine appearances at the regional event and advanced to nationals in 2017, 2019, and 2020.</div>
+          <div class="tab-pane container fade" id="menu1">Tryouts for this team are typically held at the beginning of the fall semester. There are 8 primary positions and 4 alternate positions, with 2 of these positions being potentially available to graduate students.</div>
+          <div class="tab-pane container fade" id="menu2">
+            <img src="../../static/img/ccdcimage.png" width="550" height="250" alt="CCDC Team">
+            <img src="../../static/img/image1.png">
+            <img src="../../static/img/image2.png">
+            <img src="../../static/img/image3.png">
+          </div>
+        </div>
+      
+      
+      </div>
+
+</p>
 
 
 {% endblock content %}
