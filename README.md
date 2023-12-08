@@ -75,3 +75,25 @@ python manage.py migrate
 python manage.py runserver
 ```
 - Website can based accessed on http://127.0.0.1:8000/
+
+#### Branch <a name="branch"></a>
+- Check What Branch You are In.
+```
+git status
+```
+- See all branches
+```
+git branch -a
+```
+- Create a New Branch
+```
+git checkout -b [NAME_OF_YOUR_BRANCH]
+```
+- Switch to your Branch
+```
+git checkout [NAME_OF_BRANCH]
+```
+- Pushing to a Branch
+```
+git push -u origin [BRANCH_NAME]
+```
