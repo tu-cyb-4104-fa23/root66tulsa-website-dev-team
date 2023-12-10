@@ -1,17 +1,32 @@
 {% extends "front_end/base.html" %}
+{% load static %}
 
-{% block page_header %}
+{% block content %}
 
-    <img src="root66_website\front_end\templates\front_end\club_photos\UNIVERSITY OF TULSA STUDENT CHAPTER.png" alt="TU WiCyS Logo" width="100%" height="auto" class="center"> 
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
 
+<img src="{% static 'img/wicys.png' %}" alt="TU WiCyS Logo" width="25%" height="auto" class="center">
     <div class=""p-3 mb-4 border rounded-3">
         <p><center>
             <b>
         <h1 class="display-4"; style="font-family:verdana; color: thistle;">TU Women in Cyber Security (TU WiCyS)</h1>
             </b>
     </center>
-        </p>
-        <h2>Who are We?</h2>
+    <hr>
+        <style>
+            .section {
+                text-align: center;
+            }
+        </style>
+
+        <div class="section">
+        <h1>Who are We?</h1>
         <p class=""lead">The TU student chapter of Women in Cyber Security (WiCyS) was established in 2019 and is part of the global WiCyS network. 
             TU WiCyS is dedicated to the recruitment, retention, and advancement of young women entering the cyber security space. 
             We host technical and networking events throughout the academic year and send students to the WiCyS conference every year. 
@@ -21,11 +36,18 @@
         <p class=""lead">For more information about the global Women in Cyber Security organization, visit <a class="web-links" href="wicys.org" rel="external">wicys.org</a>.</p>
         </div>
     </div>
-    <h2>Our Events for Fall 2023</h2>
-    <div class="events">
+    <hr>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+    </style>
+    
+    <h1 class="center-text">Our Events for Fall 2023</h1>
+    <div class="section">
         <div class="event">
             <div class="event-info">
-                <h5>All meetings are held in KEP 2005 on Thursdays at 6 PM, unless otherwise noted.</h5>
+                <h5>All meetings are held in KEP 2005 on Thursdays at 6 PM, unless otherwise noted below.</h5>
                 <ul>
                     <li>Welcome Meeting and Jeopardy: 9/14</li>
                     <li>Summer Experiences: 9/28</li>
@@ -39,44 +61,110 @@
             </div>
         </div>
     </div>
-    <div class="officers">
+    <div class="section">
         <div class="officer">
+            <style>
+                .center-text {
+                    text-align: center;
+                }
+            </style>
+            <hr>
+            <h1 class="center-text">Our 2023-2024 Officers</h1>
             <div class="officer-info">
-                <h2>2023-2024 Officers</h2>
+                <style>
+                    h3 {
+                        margin-top: 0;
+                        padding-left: 20px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding-left: 30px;
+                    }
+                </style>
                 <h3>President</h3>
-                <p1>Samantha Philips</p1>
+                <ul><li>Samantha Phillips</li></ul>
+                <style>
+                    h3 {
+                        margin-top: 0;
+                        padding-left: 20px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding-left: 30px;
+                    }
+                </style>
                 <h3>Vice President</h3>
-                <p1>Haleigh Harris</p1>
+                <ul><li>Haleigh Harris</li></ul>
+                <style>
+                    h3 {
+                        margin-top: 0;
+                        padding-left: 20px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding-left: 30px;
+                    }
+                </style>
                 <h3>Treasurer</h3>
-                <p1>Marina Katoh</p1>
+                <ul><li>Marina Katoh</li></ul>
+                <style>
+                    h3 {
+                        margin-top: 0;
+                        padding-left: 20px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding-left: 30px;
+                    }
+                </style>
                 <h3>Event Promotion</h3>
                 <ul>
                     <li>Riley Raasch</li>
                     <li>Madi Doan</li>
-                    <li>Laurel Martich</li>
-                </ul>
-                <h3>Event Committee</h3>
+                    <li>Laurel Martich</li></ul>
+                <style>
+                    h3 {
+                        margin-top: 0;
+                        padding-left: 20px;
+                    }
+                    ul {
+                        list-style-type: none;
+                        padding-left: 30px;
+                    }
+                </style>
+                <h3>Event Committee</h3> 
                 <ul>
                     <li>Rhea Katari</li>
                     <li>Lizzy Christensen</li>
                     <li>Evelyn Escalera Munoz</li>
                 </ul>
+            </div>
+        </hr>
     </div>
     <div class="bottom">
-        <div class="info-wrapper">
-            <h2>Connect With Us</h2>
-            <div class="one">
-                <h3>Discord</h3>
-                <p1>Join the TU WiCyS Discord <a class="web-links" href="https://discord.gg/BsbQBt6XVc" rel="external">here</p1>
-            </div>
-            <div class="two">
-                <h3>Twitter</h3>
-                <p1>Follow TU WiCyS on Twitter <a class="web-links" href="https://twitter.com/tuwicys" rel="external">here</p1>
-            </div>
-            <div class="three">
-                <h3>Instagram</h3>
-                <p1>Follow TU WiCyS on Instagram <a class="web-links" href="https://www.instagram.com/tuwicys/" rel="external">here</p1>
-            </div>
+    <div class="section">
+        <style>
+            h2 {
+                text-align: center;
+            }
+        </style>
+        <hr>
+        <style>
+            .social-media {
+                text-align: center;
+            }
+        </style>
+
+        <h1>Connect with Us!</h1>
+
+        <div class="social-media">
+            <h3>Discord</h3>
+            <p>Join the TU WiCyS Discord <a class="web-links" href="https://discord.gg/BsbQBt6XVc" rel="external">here</a></p>
+            <h3>Twitter</h3>
+            <p>Follow us on Twitter <a class="web-links" href="https://twitter.com/TUWiCyS" rel="external">here</a></p>
+            <h3>Instagram</h3>
+            <p>Follow us on Instagram <a class="web-links" href="https://www.instagram.com/tuwicys/" rel="external">here</a></p>
         </div>
+    </div>
     </div>
 {% endblock content %} 
