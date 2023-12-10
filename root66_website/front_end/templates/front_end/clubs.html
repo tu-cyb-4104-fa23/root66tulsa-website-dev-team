@@ -1,35 +1,93 @@
 {% extends "front_end/base.html" %}
 
+{% block page_header %}
+
+<p><center>
+    <b>
+        <h1 class="display-4">Clubs and Teams:</h1>
+    </b>
+</center></p>
+{% endblock page_header %} 
+
 {% block content %}
 {% load static %}
-
-<div class="button">
-
-    <div id="button" style="text-align: center;">
-        <button onclick="show()">
-        <img width="200" height="200" src="{% static 'img/red_button.jpg' %}">
-        </button>
-    </div>
-
-    <div id="clubs" class="hidden" style="display: none; text-align: center;">
-        <a href="{% url 'front_end:wicys' %}">
-            <p>WICYS</p>
-        </a>
-
-        <a href="{% url 'front_end:ctf' %}">
-            <p>CTF</p>
-        </a>
-    </div>
-
-    <script>
-        function show(){
-            var clubsDiv = document.getElementById('clubs');
-            var buttonDiv = document.getElementById('button')
-            clubsDiv.style.display = 'block';
-            buttonDiv.setAttribute("hidden", "hidden")
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <style>
+        img.logo {
+            width:200px;
+            height:200px;
+            border-radius:5%;
         }
-    </script>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
 
+    <!-- Our Clubs and Teams section -->
+<div class="container mt-5 text-center">
+    <!-- Image grid -->
+    <div class="row mt-4">
+        <!-- WICYS -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:wicys' %}">
+                    <img class="logo" src="{% static 'img/wicys.jpg' %}" alt="WiCyS" class="img-fluid">
+                    <div class="overlay">
+                        <p>WiCyS Club</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CTF -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:ctf' %}">
+                    <img class="logo" src="{% static 'img/TUCTF.jpg' %}" alt="CTF" class="img-fluid">
+                    <div class="overlay">
+                        <p>CTF Club</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CCDC -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:ccdc' %}">
+                    <img class="logo" src="{% static 'img/ccdc.jpg' %}" alt="CCDC" class="img-fluid">
+                    <div class="overlay">
+                        <p>CCDC Team</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CPCTC -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:cptc' %}">
+                    <img class="logo" src="{% static 'img/cptc.jpg' %}" alt="CPTC" class="img-fluid">
+                    <div class="overlay">
+                        <p>CPTC Team</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
 {% endblock content %}
+
+
