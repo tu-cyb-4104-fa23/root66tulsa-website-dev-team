@@ -1,21 +1,80 @@
+<!DOCTYPE html> 
+<html>
 {% extends 'front_end/base.html' %}
+
 
 {% block page_header %}
 
-    <div class=""p-3 mb-4 border rounded-3">
+<p><center>
+    <b>
+        <h1 class="display-4">Welcome to Capture the Flag!</h1>
+    </b>
+</center></p>
+{% endblock page_header %} 
+
+{% block content %} 
+<head>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        img{
+            border-radius:5%;
+        }
+    </style>
+</head>
+<body>
+    <!-- TUCTF Logo -->
+    <div class="center p-3 mb-4">
+        <img src="{% static 'img/TUCTF.jpg' %}" alt="TUCTF_LOGO" class="img-fluid">
+    </div>
+
+    <!-- Introduction to the CTF Organization -->
+    <div class="p-3 mb-4 border rounded-3">
         <p><center>
             <b>
-        <h1 class="display-4"; style="font-family:verdana; color:Tomato;">Welcome to Capture the Flag</h1>
-                </b>
-    </center>
-        </p>
-        <p class=""lead">Capture the Flag (CTF) is an organization at the University of Tulsa that strives to help students get engaged with cyber security with hands-on experience with cyber security related challenges.</p>
-        <p class=""lead">Solving CTF challenges not only allows students to apply their knowledge but also learn new areas of the cyber security field.</p>
+                <h4 style = "font-family:verdana">About the Organization:</h4>
+            </b>
+        </center></p>
+
+        <p class="lead">Capture the Flag (CTF) is an organization at the University of Tulsa that strives to help students get engaged with cyber security with hands-on experience with cyber security related challenges.</p>
+        <p class="lead">Solving CTF challenges not only allows students to apply their knowledge but also learn new areas of the cyber security field.</p>
         </div>
     </div>
 
-    {% endblock page_header %} 
+    <!-- Explanation to what CTF is. -->
+    <div class="p-3 mb-4 border rounded-3">
+        <p><center>
+            <b>
+                <h4 style = "font-family:verdana">What is a CTF?</h4>
+            </b>
+        </center></p>
+        <p class="lead">
+            CTF is a competition where competitors form teams to solve challenges. These challenges can include but not limited to programming challenges, web exploitation, reverse engineering, cryptography, and miscellaneous.
+        </p>
+    </div>
 
-    {% block content %} 
+    <!-- CTF Meeting Information -->
+    <div class="p-3 mb-4 border rounded-3">
+        <p><center>
+            <b>
+                <h4 style="font-family:verdana">How Can I Join?</h4>
+            </b>
+        </center></p>
+        <p class="lead">
+            Join the weekly CTF meetings that take place on Tuesdays 5:00 p.m.at Keplinger 2005. You will not only meet students who are dedicated to learning but also be able to learn new concepts and compete in CTF competitions!
+        </p>
+    </div>
+
 
     {% endblock content %} 
+</body>
+</html>
+<!--
+
+    -->
