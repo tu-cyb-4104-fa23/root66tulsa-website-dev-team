@@ -1,0 +1,8 @@
+
+.navbar svg {
+    height: 30px;  /* or whatever height suits your design */
+    width: 40px;   /* maintains the aspect ratio */
+    vertical-align: middle; /* this helps to align it vertically if needed */
+}
+
+

@@ -1,0 +1,34 @@
+{% extends "front_end/base.html" %}
+{% load static %}
+
+{% block page_header %}
+  <h1>Welcome to CPTC</h1>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="row mt-4 border border-secondary rounded p-3">
+    <div class="col-md-7">
+      <h2>About CPTC</h2>
+      <p>The TU Collegiate Penetration Team (TUCPTC) is one of the university's two primary competitive cyber teams. The event is a red team style competition where students conduct a penetration test on a mock network that simulates a contracted engagement. Each fall, the TU team competes in the central regional (hosted by Tennessee Tech) with hopes of advancing to the global competition at Rochester Institute of Technology in New York. The TU team makes yearly appearances in the central regional and made its first global competition appearance in the 2021-22 season.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="{% static 'images/cptc_group.jpg' %}" alt="CPTC Group Photo" class="img-fluid">
+    </div>
+  </div>
+
+  <!-- Outlined box around three columns -->
+  <div class="row mt-4 border border-secondary rounded p-3">
+    <div class="col-md-4 text-center">
+        <h3>Tryouts</h3>
+        <p>Tryouts for this team are typically held at the beginning of the fall semester. There are 6 primary positions and 2 alternate positions, with positions being potentially available to graduate students.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <h3>Competition Info</h3>
+        <p>More information about the CPTC competition circuit can be found on the official CPTC website.</p>
+    </div>
+    <div class="col-md-4 text-center">
+        <h3>Contact</h3>
+        <p>If you are interested in learning more about the team or in joining TU CPTC, please reach out to the cyber team coach Codi West at codiwest@utulsa.edu.</p>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: root66tulsa-web
+    environment:
+      - SERVER_IP=${SERVER_IP}
+      - SERVER_PORT=${SERVER_PORT}
+    command: ["python", "manage.py", "runserver", "${SERVER_IP}:${SERVER_PORT}"]
+    ports:
+      - "${SERVER_PORT}:8000"
+    restart: always

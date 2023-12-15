@@ -1,0 +1,125 @@
+{% extends "front_end/base.html" %}
+
+{% block page_header %}
+
+<p><center>
+    <b>
+        <h1 class="display-4"; style="font-family:monospace">Root 66 Cyber Clubs</h1>
+    </b>
+</center></p>
+{% endblock page_header %} 
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <style>
+        img.logo {
+            width:200px;
+            height:200px;
+            border-radius:5%;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for image in images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static 'img/' %}{{ image }}" class="d-block mx-auto" alt="Image" style="max-width: 500px; max-height: 300px;">
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           
+        </a>
+    </div>
+    
+    <!-- Info below carousel -->
+    <div class="container mt-4 text-center">
+        <!-- Header -->
+        <h2 class="display-4">Welcome!</h2>
+    
+        <!-- Block text -->
+        <div class="p-3 mb-4 border rounded-3">
+            <p class="lead">Welcome to Root66Tulsa Cyber Clubs, the hub for all things cyber at the University of Tulsa! We are host to a number of events, resources, and competitive cyber teams available at TU throughout the year. No matter your experience level, we have a place for you!</p>
+        </div>
+        <!-- Learn More button -->
+        <a href="{% url 'front_end:about' %}" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <!-- Our Clubs and Teams section -->
+<div class="container mt-5 text-center">
+    <!-- Header -->
+    <h2 class="display-4">Clubs and Teams: </h2>
+
+    <!-- Image grid -->
+    <div class="row mt-4">
+        <!-- WICYS -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:wicys' %}">
+                    <img class="logo" src="{% static 'img/wicys.jpg' %}" alt="WiCyS" class="img-fluid">
+                    <div class="overlay">
+                        <p>WiCyS Club</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CTF -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:ctf' %}">
+                    <img class="logo" src="{% static 'img/TUCTF.jpg' %}" alt="CTF" class="img-fluid">
+                    <div class="overlay">
+                        <p>CTF Club</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CCDC -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:ccdc' %}">
+                    <img class="logo" src="{% static 'img/ccdc.jpg' %}" alt="CCDC" class="img-fluid">
+                    <div class="overlay">
+                        <p>CCDC Team</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- CPCTC -->
+        <div class="col-md-3">
+            <div class="image-container">
+                <a href="{% url 'front_end:cptc' %}">
+                    <img class="logo" src="{% static 'img/cptc.jpg' %}" alt="CPTC" class="img-fluid">
+                    <div class="overlay">
+                        <p>CPTC Team</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+{% endblock content %}
