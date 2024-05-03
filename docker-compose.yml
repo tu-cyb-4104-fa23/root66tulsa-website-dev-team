@@ -4,10 +4,36 @@ services:
   web:
     build: .
     container_name: root66tulsa-web
-    environment:
-      - SERVER_IP=${SERVER_IP}
-      - SERVER_PORT=${SERVER_PORT}
-    command: ["python", "manage.py", "runserver", "${SERVER_IP}:${SERVER_PORT}"]
-    ports:
-      - "${SERVER_PORT}:8000"
-    restart: always
+    command: "python manage.py runserver 0.0.0.0:8000 --insecure"
+    # Labels for Watchtower and Traefik
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.root66.rule=Host(`dev.root66tulsa.club`)"
+      - "traefik.http.routers.root66.entrypoints=websecure"
+      - "traefik.http.routers.root66.tls=true"
+      - "traefik.http.services.root66.loadbalancer.server.port=8000"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.root66.tls.certresolver=leresolver"
+      # Security Headers for Mozilla Observatory
+      # HSTS
+      - "traefik.http.middlewares.root66.headers.stsIncludeSubdomains=false"
+      - "traefik.http.middlewares.root66.headers.stsPreload=true"
+      - "traefik.http.middlewares.root66.headers.stsSeconds=31536000"
+      - "traefik.http.middlewares.root66.headers.isDevelopment=false"
+      # X-Frame-Options
+      - "traefik.http.middlewares.root66.headers.frameDeny=true"
+      # CSP
+      - "traefik.http.middlewares.root66.headers.contentSecurityPolicy=default-src 'self'; script-src 'self'; style-src 'self';"
+      # X-Content-Type
+      - "traefik.http.middlewares.root66.headers.contentTypeNosniff=true"
+      # Apply middleware to router
+      - "traefik.http.routers.cybercamp.middlewares=root66"
+    ports: !reset []
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
